@@ -238,13 +238,11 @@ for i in correlation_tasks:
     word_to_idx_men = sorted(word_to_idx_men.items(), key=operator.itemgetter(1))
     lookup_men = dict(word_to_idx_men)
     
-    # print('<{} Dataset>'.format(i))
-    # print("Spearman Before :", Evaluating_MEN_Spearman(wordVecs, data_men, lookup_men))
-    # print("         After  :", 
-    print(Evaluating_MEN_Spearman(new_wordVecs, data_men, lookup_men))
-    # print("Pearson  Before :", Evaluating_MEN_Pearson(wordVecs, data_men, lookup_men))
-    # print("         After  :", 
-    print(Evaluating_MEN_Pearson(new_wordVecs, data_men, lookup_men))
+    print('<{} Dataset>'.format(i))
+    print("Spearman Before :", Evaluating_MEN_Spearman(wordVecs, data_men, lookup_men))
+    print("         After  :", Evaluating_MEN_Spearman(new_wordVecs, data_men, lookup_men))
+    print("Pearson  Before :", Evaluating_MEN_Pearson(wordVecs, data_men, lookup_men))
+    print("         After  :", Evaluating_MEN_Pearson(new_wordVecs, data_men, lookup_men))
 
 with open(args.test_path, 'r', encoding='utf-8') as fp_men:
     fp_men_ = fp_men.readlines()
