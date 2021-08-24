@@ -90,7 +90,7 @@ args = parser.parse_args()
 np.random.seed(42)
 
 print('Loading data...')
-reviews = pd.read_csv("data/USairline/Tweet.csv", encoding = 'utf8')
+reviews = pd.read_csv("data/USairline/Tweets.csv", encoding = 'utf8')
 
 X = []
 sentences = list(reviews['text'])
