@@ -138,10 +138,11 @@ for i in range(2):
 
     yhat_probs = model.predict(X_test, verbose=1)
     # predict crisp classes for test set
-    yhat_classes = model.predict_classes(X_test, verbose=1)
+    #yhat_classes = model.predict_classes(X_test, verbose=1)
+    yhat_classes = np.argmax(model.predict(X_test), axis=1)
     # reduce to 1d array
     yhat_probs = yhat_probs[:, 0]
-    yhat_classes = yhat_classes[:, 0]
+    #yhat_classes = yhat_classes[:, 0]
 
     # accuracy: (tp + tn) / (p + n)
     accuracy = accuracy_score(y_test, yhat_classes)
