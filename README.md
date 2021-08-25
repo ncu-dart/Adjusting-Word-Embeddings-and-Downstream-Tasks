@@ -3,9 +3,12 @@
 # Introduction
 We adjust the pre-trained word embeddings through a self-attention mechanism so that the word embeddings can preserve the relationship between synonyms and antonyms in the lexicon, and evaluate the adjusted word embeddings the through NLP downstream tasks.
 
-Paper Links: [以同反義詞典調整的詞向量對下游自然語言任務影響之實證研究](https://drive.google.com/file/d/1kZyFIPDyEZPyFskrf3oNX69APMNo36yy/view?usp=sharing)
+Thesis Links: [以同反義詞典調整的詞向量對下游自然語言任務影響之實證研究](https://drive.google.com/file/d/1kZyFIPDyEZPyFskrf3oNX69APMNo36yy/view?usp=sharing)
 
 # Run
+
+## Environment suggestion
+* The library `bcolz` is difficult to install.  We suggest using `Conda Python 3.7` and installing library `bcolz` via `conda install` for an easier setup.
 
 ## Adjusting Word Embeddings
 
